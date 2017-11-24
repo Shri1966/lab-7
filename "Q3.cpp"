@@ -1,0 +1,67 @@
+#include <iostream>
+using namespace std;
+
+class Rectangle
+{
+  public:
+  double length;
+  double breadth;
+  double area;
+  double perimeter;
+  double peri(double len, double bre);   
+  double ar(double len, double bre);        
+};
+
+double Rectangle::peri(double l,double b)
+{ 
+  return l+b;
+}
+double Rectangle::ar(double l,double b)
+{
+  return l*b;
+}
+
+int main()
+{
+   
+   Rectangle Rec1, Rec2;
+   cout<<"\n \nPROGRAM TO FIND AREA AND PERIMETER OF A TRIANGLE AND COMPARE IT WITH ANOTHER";
+   cout<<"\n \nEnter the length of FIRST rectangle: ";
+   cin>>Rec1.length;
+   cout<<"\n \nEnter the breadth of FIRST rectangle: ";
+   cin>>Rec1.breadth;
+   cout<<"\n \nEnter the length of SECOND rectangle: ";
+   cin>>Rec2.length;
+   cout<<"\n \nEnter the breadth of SECOND rectangle: ";
+   cin>>Rec2.breadth;
+   Rec1.area=Rec1.ar(Rec1.length,Rec1.breadth);
+   Rec1.perimeter=Rec1.peri(Rec1.length,Rec1.breadth);
+   Rec2.area=Rec2.ar(Rec2.length,Rec2.breadth);
+   Rec2.perimeter=Rec2.peri(Rec2.length,Rec2.breadth);
+   if(Rec1.area>Rec2.area)
+   { 
+     cout<<"\nArea of Rectangle 1 is greater than Rectangle 2";
+   }
+   else if(Rec1.area<Rec2.area)
+   { 
+     cout<<"\nArea of Rectangle 2 is greater than Rectangle 1";
+   }
+   else
+   {
+     cout<<"\nArea of Rectangle 1 and Rectangle 2 are equal";
+   }
+   if(Rec1.perimeter>Rec2.perimeter)
+   { 
+     cout<<"\nPerimeter of Rectangle 1 is greater than Rectangle 2";
+   }
+   else if(Rec1.perimeter<Rec2.perimeter)
+   { 
+     cout<<"\nPerimeter of Rectangle 2 is greater than Rectangle 1";
+   }
+   else
+   {
+     cout<<"\nPerimeter of Rectangle 1 and Rectangle 2 are equal";
+   }
+   return 0;
+ }
+   
